@@ -3,7 +3,7 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: We implemented a function that checks for naked twins and eliminates twinning values in peers of each of the naked twins.  When we eliminate these values, we are effectively propagating more constraints throughout the values dictionary.  This solves the naked twins problem.
+A: We implemented a function that checks for naked twins and eliminates twinning values in peers of both of the naked twins.  When we eliminate these values, we are effectively propagating more constraints throughout the values dictionary.  This solves the naked twins problem.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
