@@ -10,22 +10,34 @@ def assign_value(values, box, value):
         assignments.append(values.copy())
     return values
 
-def cross(A, B):
-    "Cross product of elements in A and elements in B."
-    return [s+t for s in A for t in B]
+from utils import *
 
-rows = 'ABCDEFGHI'
-cols = '123456789'
-boxes = cross(rows,cols)
-row_units = [cross(r,cols) for r in rows]
-col_units = [cross(rows,c) for c in cols]
-square_units = [cross(rs,cs) for rs in ('ABC','DEF','GHI') for cs in ('123','456','789')]
-diagonal_unit_lr = [rows[x]+cols[x] for x in range(9)]
-diagonal_unit_rl = [rows[8-x]+cols[x] for x in range(9)]
-unitlist = row_units+col_units+square_units+[diagonal_unit_lr]+[diagonal_unit_rl]
-units = dict((s, [u for u in unitlist if s in u]) for s in boxes)
-peers = dict((s, set(sum(units[s],[]))-set([s])) for s in boxes)
-
+def find_twins(values):
+    """Find boxes that satisfy the naked twins criteria.
+    Args:
+        values(dict): a dictionary of the form {'box_name': '123456789', ...}
+    Returns
+        twins(list): a list containing tuples of twins
+    """
+    twos = [x for x in values.keys() if len(values[x])==2]
+    twins = [(x,y) for x in twos for y in peers[x] if values[x]==values[y]]
+    return twins
+    
+def eliminate_twins(values, twins):
+    """For boxes from twins, eliminate their values from their peers in "values"
+    Args:
+        values(dict): a dictionary of the form {'box_name': '123456789', ...}
+        twins(list): a list containing tuples of twins
+    Return:
+        the values dictionary with the naked twins eliminated from peers.
+    """
+    for pair in twins:
+        digits = values[pair[0]]
+        for peer in peers[pair[0]]:
+            if peer not in pair and peer in peers[pair[1]]:
+                values = assign_value(values, peer, values[peer].replace(digits[0],"").replace(digits[1],""))
+    return values
+    
 def naked_twins(values):
     """Eliminate values using the naked twins strategy.
     Args:
@@ -35,14 +47,9 @@ def naked_twins(values):
         the values dictionary with the naked twins eliminated from peers.
     """
     # Find all instances of naked twins
-    twos = [x for x in values.keys() if len(values[x])==2]
-    twins=[(x,y) for x in twos for y in peers[x] if values[x]==values[y]]
+    twins=find_twins(values)
     # Eliminate the naked twins as possibilities for their peers
-    for pair in twins:
-        digits = values[pair[0]]
-        for peer in peers[pair[0]]:
-            if peer not in pair and peer in peers[pair[1]]:
-                values = assign_value(values, peer, values[peer].replace(digits[0],"").replace(digits[1],""))
+    values = eliminate_twins(values,twins)
     return values
      
 def grid_values(grid):
