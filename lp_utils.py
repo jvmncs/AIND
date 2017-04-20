@@ -19,7 +19,7 @@ class FluentState():
 
 
 def conjunctive_sentence(pos_list, neg_list):
-    """ returns expr conjuntive sentence given positive and negative fluent lists
+    """ returns expr conjunctive sentence given positive and negative fluent lists
 
     :param pos_list: list of fluents
     :param neg_list: list of fluents
