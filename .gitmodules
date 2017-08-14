@@ -1,1 +1,4 @@
 
+[submodule "dlnd"]
+	path = dlnd
+	url = https://github.com/jvmancuso/dlnd.git
