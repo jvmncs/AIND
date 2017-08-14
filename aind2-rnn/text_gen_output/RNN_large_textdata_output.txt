@@ -1,15 +1,20 @@
 -------------------
 input chars = 
-e eclipses and predominates the whole of her sex. it was not that he felt any emotion akin to love f"
+is eyes she eclipses and predominates the whole of her sex. it was not that he felt any emotion akin"
 predicted chars = 
-or a claad of the carige. is no doubt that i may groute, and sourne, he said, and where the case upo"
+ akin akin akin akin akin akin akin akin akin akin akin akin akin akin akin akin akin akin akin akin"
 -------------------
 input chars = 
- difficulties, if you are to understand the situation. i am following you closely, i answered. i was"
+er, of dubious and questionable memory. i had seen little of holmes lately. my marriage had drifted "
 predicted chars = 
- weakn of their. weyen he come to see me what i was ally unow that there was no some allosing a smal"
+fted fted fted fted fted fted fted fted fted fted fted fted fted fted fted fted fted fted fted fted "
 -------------------
 input chars = 
-notice the carriage go up any. come, cried the inspector, laughing; its a very pretty diversity of o"
+ see! said holmes. hum! born in new jersey in the year   . contralto hum! la scala, hum! prima donna"
 predicted chars = 
-thers. and the evering a small bearine it allars where are remarked hor had been day no tonsing that"
+donnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonnadonna"
+-------------------
+input chars = 
+ford arms where a room had already been engaged for us.  i have ordered a carriage, said lestrade as"
+predicted chars = 
+de asde asde asde asde asde asde asde asde asde asde asde asde asde asde asde asde asde asde asde as"
