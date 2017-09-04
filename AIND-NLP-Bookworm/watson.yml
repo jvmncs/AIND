@@ -4,7 +4,6 @@ channels:
 dependencies:
 - _nb_ext_conf=0.4.0=py36_1
 - anaconda-client=1.6.3=py36_0
-- appnope=0.1.0=py36_0
 - beautifulsoup4=4.6.0=py36_0
 - bleach=1.5.0=py36_0
 - clyent=1.2.2=py36_0
