@@ -13,3 +13,7 @@ transfer-learning/.ipynb_checkpoints/
 transfer-learning/.DS_Store
 
 *credentials.json
+
+AIND-NLP/*.h5
+AIND-NLP/.ipynb_checkpoints/
+AIND-NLP/.Rhistory
