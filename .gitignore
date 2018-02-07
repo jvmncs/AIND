@@ -17,3 +17,6 @@ transfer-learning/.DS_Store
 AIND-NLP/*.h5
 AIND-NLP/.ipynb_checkpoints/
 AIND-NLP/.Rhistory
+
+*.ipynb_checkpoints*
+*__pycache__*
